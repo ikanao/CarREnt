@@ -6,11 +6,11 @@ package clases;
  */
 public class Vehiculo {
     // Atributos
-    String patente;
-    String marca;
-    String modelo;
-    int aFabricacion;
-    String condicionVehiculo;
+    private String patente;
+    private String marca;
+    private String modelo;
+    private int aFabricacion;
+    private String condicionVehiculo;
     
     // Constructor
     public Vehiculo(String patente, String marca, String modelo, int aFabricacion, String condicionVehiculo){
