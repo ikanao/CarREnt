@@ -64,11 +64,12 @@ public class Vehiculo {
     }
     
     // Metodos Personalizados
-    public void asignarMantencion(String patente){
+    public void asignarMantencion(){
         setCondicionVehiculo("M");
+        mostrarMensaje("El vehículo fue asignado a mantención");
     }
     
-    public static void mostrarMensaje(String mensaje){
+    private void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
     }
 

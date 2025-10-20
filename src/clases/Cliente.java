@@ -46,12 +46,13 @@ public class Cliente {
     
     // Metodos personalizados
     
-    public static void mostrarMensaje(String mensaje){
+    private void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
     }
     
-    public void deshabilitarCliente(Boolean vigencia){
+    public void deshabilitarCliente(){
         setVigencia(false);
+        mostrarMensaje("El cliente ha sido deshabilitado");
     }
     
     // ToString
