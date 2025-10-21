@@ -11,6 +11,7 @@ public class Arriendo {
     private int diasArriendo;
     private Vehiculo[] listaVehiculos;
     private Cliente[] listaClientes;
+    private Devolucion devolucion;
     
     // Metodos mutadores
     public void setNumeroArriendo(int numeroArriendo){
@@ -27,6 +28,10 @@ public class Arriendo {
     
     public void setListaClientes(Cliente[] listaClientes){
         this.listaClientes = listaClientes;
+    }
+    
+    public void setDevolucion(Devolucion devolucion){
+        this.devolucion = devolucion;
     }
     
     // Metodos accesores
@@ -46,13 +51,15 @@ public class Arriendo {
         return this.listaClientes;
     }
     
+    public Devolucion getDevolucion(){
+        return this.devolucion;
+    }
+    
     // Metodos custom
     
     private void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
     }
-    
-    
     
 }
 
