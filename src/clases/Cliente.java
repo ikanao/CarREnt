@@ -58,7 +58,7 @@ public class Cliente {
     // ToString
     @Override
     public String toString(){
-        return "Vehiculo{" + "cedula = " + cedula + ", nombre = " + nombre + ", vigencia = " + vigencia;
+        return "Cliente{" + "cedula = " + cedula + ", nombre = " + nombre + ", vigencia = " + vigencia;
     }
     
     

@@ -1,5 +1,9 @@
 package clases;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Calendar;
+
 /**
  *
  * @author alanayca
@@ -7,11 +11,35 @@ package clases;
 public class Arriendo {
     
     // Atributos
+    private static int contador = 1;
     private int numeroArriendo;
     private int diasArriendo;
-    private Vehiculo[] listaVehiculos;
-    private Cliente[] listaClientes;
+    private Vehiculo vehiculo;
+    private Cliente cliente;
     private Devolucion devolucion;
+    
+    // Constructor
+    public Arriendo (int diasArriendo, Vehiculo vehiculo, Cliente cliente){
+        
+        this.numeroArriendo = contador++;
+        this.vehiculo = vehiculo;
+        this.cliente = cliente;
+        this.diasArriendo = diasArriendo;
+        
+        Date fecha = new Date();
+        Calendar calendario = Calendar.getInstance();
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        calendario.setTime(fecha);
+        calendario.add(Calendar.DAY_OF_MONTH, diasArriendo);
+        
+        String fechaDevolucion = sdf.format(calendario.getTime());
+
+        
+        Devolucion devolucion = new Devolucion(fechaDevolucion);
+        this.devolucion = devolucion;
+        
+    }
     
     // Metodos mutadores
     public void setNumeroArriendo(int numeroArriendo){
@@ -22,12 +50,12 @@ public class Arriendo {
         this.diasArriendo = diasArriendo;
     }
     
-    public void setListaVehiculos(Vehiculo[] listaVehiculos){
-        this.listaVehiculos = listaVehiculos;
+    public void setVehiculo(Vehiculo vehiculo){
+        this.vehiculo = vehiculo;
     }
     
-    public void setListaClientes(Cliente[] listaClientes){
-        this.listaClientes = listaClientes;
+    public void setCliente(Cliente cliente){
+        this.cliente = cliente;
     }
     
     public void setDevolucion(Devolucion devolucion){
@@ -43,12 +71,12 @@ public class Arriendo {
         return this.diasArriendo;
     }
     
-    public Vehiculo[] getListaVehiculos(){
-        return this.listaVehiculos;
+    public Vehiculo getVehiculo(){
+        return this.vehiculo;
     }
     
-    public Cliente[] getListaClientes(){
-        return this.listaClientes;
+    public Cliente getCliente(){
+        return this.cliente;
     }
     
     public Devolucion getDevolucion(){
@@ -56,10 +84,19 @@ public class Arriendo {
     }
     
     // Metodos custom
-    
     private void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
     }
+    
+    private void contador(){
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Arriendo{" + "numeroArriendo = " + numeroArriendo + ", diasArriendo = " + diasArriendo + ", " + vehiculo + ", " +  cliente + ", " +  devolucion + '}';
+    }
+    
     
 }
 

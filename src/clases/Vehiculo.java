@@ -13,12 +13,12 @@ public class Vehiculo {
     private String condicionVehiculo;
     
     // Constructor
-    public Vehiculo(String patente, String marca, String modelo, int aFabricacion, String condicionVehiculo){
+    public Vehiculo(String patente, String marca, String modelo, int aFabricacion){
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
         this.aFabricacion = aFabricacion;
-        this.condicionVehiculo = condicionVehiculo;
+        this.condicionVehiculo = "D";
     }
     
     // Metodos mutadores
@@ -75,7 +75,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "patente=" + patente + ", marca=" + marca + ", modelo=" + modelo + ", aFabricacion=" + aFabricacion + ", condicionVehiculo=" + condicionVehiculo + '}';
+        return "Vehiculo{" + "patente = " + patente + ", marca = " + marca + ", modelo = " + modelo + ", aFabricacion = " + aFabricacion + ", condicionVehiculo = " + condicionVehiculo + '}';
     }
     
 }
