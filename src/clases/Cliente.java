@@ -58,7 +58,18 @@ public class Cliente {
     // ToString
     @Override
     public String toString(){
-        return "Cliente{" + "cedula = " + cedula + ", nombre = " + nombre + ", vigencia = " + vigencia;
+        String estadoVigencia;
+        
+        if(getVigencia() == true){
+            estadoVigencia = "Vigente";
+        }else{
+            estadoVigencia = "Sin vigencia";
+        }
+        
+        
+        return "Cliente: " + nombre
+                + "\n        Cedula             :   " + cedula 
+                + "\n        Vigencia           :   " + estadoVigencia;
     }
     
     

@@ -42,7 +42,8 @@ public class Devolucion {
 
     @Override
     public String toString() {
-        return "Devolucion{" + "numeroDevolucion=" + numeroDevolucion + ", fechaDevolucion=" + fechaDevolucion + '}';
+        return "Devolucion Nº" + numeroDevolucion 
+                + "\n        fechaDevolucion    :   " + fechaDevolucion;
     }
     
 }

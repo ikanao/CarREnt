@@ -75,7 +75,23 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "patente = " + patente + ", marca = " + marca + ", modelo = " + modelo + ", aFabricacion = " + aFabricacion + ", condicionVehiculo = " + condicionVehiculo + '}';
+        
+        String cVehiculo;
+        
+        if (getCondicionVehiculo() == "D") {
+            cVehiculo = "Disponible";
+        }else if(getCondicionVehiculo() == "A"){
+            cVehiculo = "Arrendado";
+        }else{
+            cVehiculo = "En mantención";
+        }
+        
+        
+        return "Vehiculo: " + patente 
+                + "\n        marca              :   " + marca 
+                + "\n        modelo             :   " + modelo 
+                + "\n        aFabricacion       :   " + aFabricacion 
+                + "\n        condicionVehiculo  :   " + cVehiculo;
     }
     
 }

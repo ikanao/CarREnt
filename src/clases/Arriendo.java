@@ -3,6 +3,7 @@ package clases;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
+import java.util.HashSet;
 
 /**
  *
@@ -25,6 +26,9 @@ public class Arriendo {
         this.vehiculo = vehiculo;
         this.cliente = cliente;
         this.diasArriendo = diasArriendo;
+        
+        vehiculo.setCondicionVehiculo("A");
+        
         
         Date fecha = new Date();
         Calendar calendario = Calendar.getInstance();
@@ -94,7 +98,10 @@ public class Arriendo {
 
     @Override
     public String toString() {
-        return "Arriendo{" + "numeroArriendo = " + numeroArriendo + ", diasArriendo = " + diasArriendo + ", " + vehiculo + ", " +  cliente + ", " +  devolucion + '}';
+        return "Arriendo Nº" + numeroArriendo + ", Días de arriendo: " + diasArriendo 
+                + "\n     " + cliente 
+                + "\n     " +  vehiculo 
+                + "\n     " +  devolucion + "\n";
     }
     
     
