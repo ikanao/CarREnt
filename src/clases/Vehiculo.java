@@ -87,7 +87,7 @@ public class Vehiculo {
         }
         
         
-        return "Vehiculo: " + patente 
+        return "Patente: " + patente 
                 + "\n        marca              :   " + marca 
                 + "\n        modelo             :   " + modelo 
                 + "\n        aFabricacion       :   " + aFabricacion 

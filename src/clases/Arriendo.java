@@ -27,19 +27,28 @@ public class Arriendo {
         this.cliente = cliente;
         this.diasArriendo = diasArriendo;
         
+        //Asignando condición del vehículo como "Arrendado"
         vehiculo.setCondicionVehiculo("A");
         
-        
+        // Instanciando fecha
         Date fecha = new Date();
+        
+        // Instanciando calendario
         Calendar calendario = Calendar.getInstance();
         
+        // Instanciando y definiendo formato de hora
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
+        // Asignando fecha actual
         calendario.setTime(fecha);
+        
+        // Sumando numero días a la fecha actual
         calendario.add(Calendar.DAY_OF_MONTH, diasArriendo);
         
+        // Guardando fecha de devolución
         String fechaDevolucion = sdf.format(calendario.getTime());
 
-        
+        // Instanciando devolucion
         Devolucion devolucion = new Devolucion(fechaDevolucion);
         this.devolucion = devolucion;
         
@@ -90,10 +99,6 @@ public class Arriendo {
     // Metodos custom
     private void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
-    }
-    
-    private void contador(){
-        
     }
 
     @Override

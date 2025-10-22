@@ -49,10 +49,10 @@ public class CarREnt {
         // Quitando vigencia al Cliente º1
         System.out.println("Quitando vigencia al Cliente º1");
         cliente1.deshabilitarCliente();
-        System.out.println("La vigencia actual del cliente Nº1 es: " + cliente1.getVigencia());
+        System.out.println(cliente1.toString());
         System.out.println("");
         
-        // Asignando vehiculo º1 a mantención
+        // Asignando vehiculo Nº1 a mantención
         System.out.println("--------------------------------------------");
         System.out.println("Asignando a mantención...");
         vehiculo1.asignarMantencion();
