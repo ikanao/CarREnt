@@ -59,8 +59,7 @@ public class CarREnt {
         System.out.println(vehiculo1.toString());
         System.out.println("--------------------------------------------");
         
-        
-  
+        // Creando un nuevo arriendo
         Arriendo arriendo2 = new Arriendo(10, vehiculo2, cliente2);
         System.out.println(arriendo2.toString());
 

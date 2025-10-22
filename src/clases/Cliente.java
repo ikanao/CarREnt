@@ -67,8 +67,8 @@ public class Cliente {
         }
         
         
-        return "Cliente: " + nombre
-                + "\n        Cedula             :   " + cedula 
+        return "Cliente: " + cedula
+                + "\n        Nombre             :   " + nombre
                 + "\n        Vigencia           :   " + estadoVigencia;
     }
     
