@@ -3,7 +3,6 @@ package clases;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
-import java.util.HashSet;
 
 /**
  *
@@ -12,7 +11,6 @@ import java.util.HashSet;
 public class Arriendo {
     
     // Atributos
-    private static int contador = 1;
     private int numeroArriendo;
     private int diasArriendo;
     private Vehiculo vehiculo;
@@ -20,6 +18,7 @@ public class Arriendo {
     private Devolucion devolucion;
     
     // Constructor
+    private static int contador = 1;
     public Arriendo (int diasArriendo, Vehiculo vehiculo, Cliente cliente){
         
         this.numeroArriendo = contador++;
@@ -100,6 +99,14 @@ public class Arriendo {
     private void mostrarMensaje(String mensaje){
         System.out.println(mensaje);
     }
+    
+    // Funciones restantes
+    // Falta: evaluarArriendo()
+    // Falta: ingresarArriendo()
+    // Falta: calcularMonto()
+    // Falta: generarTicket()
+    // Falta: generarDevolucion()
+    
 
     @Override
     public String toString() {

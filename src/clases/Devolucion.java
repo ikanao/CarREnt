@@ -1,18 +1,16 @@
 package clases;
 
-import java.util.Calendar;
-
 /**
  *
  * @author alanayca
  */
 public class Devolucion {
     // Atributos
-    private static int contador;
     private int numeroDevolucion;
     private String fechaDevolucion;
     
     // Constructor
+    private static int contador;
     public Devolucion(String fechaDevolucion){
         this.numeroDevolucion = contador++;
         this.fechaDevolucion = fechaDevolucion;
